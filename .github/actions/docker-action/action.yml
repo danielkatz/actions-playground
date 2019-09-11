@@ -1,9 +1,11 @@
 name: Docker action
 inputs:
+  docker:
+    required: true
   cmd:
     description: Command to be run on the container
     required: true
 runs:
   using: "docker"
-  image: "docker://ubuntu:latest"
+  image: "docker://${{ inputs.docker }}"
   args: ["bash", "-c", "${{ inputs.cmd }}"]
