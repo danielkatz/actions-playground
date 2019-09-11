@@ -11,6 +11,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       - run: cat /home/runner/work/actions-playground/actions-playground/./.github/actions/docker-action/action.yml
+      - run: docker --version
       - name: My first step
         uses: ./.github/actions/docker-action
         with:
