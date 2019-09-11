@@ -10,7 +10,6 @@ jobs:
       - uses: actions/checkout@v1
       - run: docker --version
       - run: ls -la
-      - run: find / -name "LICENSE"
       - name: Look at volumes
         uses: docker://ubuntu:latest
         with:
@@ -29,4 +28,5 @@ jobs:
         uses: ./.github/actions/docker-action-v2
         with:
           image: ubuntu:latest
-          command: cd /home && df && find / -name "LICENSE"
+          command: cd /home && df && find / -name "unique-file-name"
+      - run: find / -name "unique-file-name"
