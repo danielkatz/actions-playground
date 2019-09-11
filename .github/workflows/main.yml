@@ -28,4 +28,4 @@ jobs:
         uses: ./.github/actions/docker-action-v2
         with:
           image: ubuntu:latest
-          command: cd /home && df && ls -la && cd /github && ls -la && cd /github/home && ls -la
+          command: cd /home && df && ls -la && cd /github && ls -la && cd /github/home && ls -la && cd /github/workspace && ls -la
