@@ -4,7 +4,8 @@ inputs:
     description: Command to be run on the container
     required: true
 runs:
-  image: "docker://ubuntu"
+  using: 'docker'
+  image: 'docker://debian:stetch-slim'
   # entrypoint: bash -c
   # args: ["${{ inputs.commands }}"]
   # using: "node12"
