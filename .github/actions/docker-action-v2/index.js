@@ -9,6 +9,7 @@ const RUNNER_WORKSPACE = process.env.RUNNER_WORKSPACE;
 const WORKSPACE = RUNNER_WORKSPACE.split('/').pop();
 
 async function runDockerContainer() {
+    console.log(COMMAND);
     core.debug('run docker container');
     await exec.exec('docker', [
         'container',
