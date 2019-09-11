@@ -6,7 +6,6 @@ inputs:
 runs:
   using: "docker"
   image: "docker://ubuntu:latest"
-  entrypoint: /bin/bash
   args: ["bash", "--help"]
   # args: ["${{ inputs.commands }}"]
   # using: "node12"
