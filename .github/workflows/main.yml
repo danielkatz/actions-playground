@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: docker --version
+      - run:  ls -la
       - name: Look at volumes
         uses: docker://ubuntu:latest
         with:
