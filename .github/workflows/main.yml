@@ -13,4 +13,4 @@ jobs:
       - name: My first step
         uses: ./.github/actions/docker-action
         with:
-          commands: ["whoami"]
+          commands: "whoami"
