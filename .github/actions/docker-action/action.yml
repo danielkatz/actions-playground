@@ -4,9 +4,10 @@ inputs:
     description: Command to be run on the container
     required: true
 runs:
-  using: 'docker'
-  image: 'docker://debian:stetch-slim'
-  # entrypoint: bash -c
+  using: "docker"
+  image: "docker://debian:stetch-slim"
+  entrypoint: /bin/sh
+  args: ["-c", "echo hi"]
   # args: ["${{ inputs.commands }}"]
   # using: "node12"
   # main: "index.js"
