@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run a one-line script
         run: echo Hello, world!
-      - run: cat /home/runner/work/actions-playground/actions-playground/./.github/actions/docker-action/actions.yml
+      - run: cat /home/runner/work/actions-playground/actions-playground/./.github/actions/docker-action/action.yml
       - name: My first step
         uses: ./.github/actions/docker-action
         with:
