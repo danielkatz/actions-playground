@@ -7,7 +7,7 @@ runs:
   using: "docker"
   image: "docker://ubuntu:latest"
   entrypoint: /bin/bash
-  args: ["--help"]
+  args: ["bash", "--help"]
   # args: ["${{ inputs.commands }}"]
   # using: "node12"
   # main: "index.js"
