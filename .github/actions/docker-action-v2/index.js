@@ -5,6 +5,9 @@ const os = require('os');
 const IMAGE = core.getInput('image');
 const COMMAND = core.getInput('command');
 
+const RUNNER_WORKSPACE = process.env.RUNNER_WORKSPACE;
+const WORKSPACE = RUNNER_WORKSPACE.split('/').pop();
+
 async function runDockerContainer() {
     core.debug('run docker container');
     await exec.exec('docker', [
@@ -16,7 +19,7 @@ async function runDockerContainer() {
         // '-v', '/:/',
         '-v', '/home/runner/work/_temp/_github_home:/github/home',
         '-v', '/home/runner/work/_temp/_github_workflow:/github/workflow',
-        // '-v', `${RUNNER_WORKSPACE}/${WORKSPACE}:/github/workspace`,
+        '-v', `${RUNNER_WORKSPACE}/${WORKSPACE}:/github/workspace`,
         IMAGE,
         'sh', '-cex', COMMAND,
     ]);

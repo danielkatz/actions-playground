@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v1
       - run: docker --version
       - run: ls -la
+      - run: find / -name "LICENSE"
       - name: Look at volumes
         uses: docker://ubuntu:latest
         with:
