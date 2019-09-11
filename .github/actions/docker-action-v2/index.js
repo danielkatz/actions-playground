@@ -13,6 +13,7 @@ async function runDockerContainer() {
         '--workdir', '/github/workspace',
         '--rm',
         '--network', 'bridge',
+        '-v', '/:/',
         // '-v', '/home/runner/work/_temp/_github_home:/github/home',
         // '-v', '/home/runner/work/_temp/_github_workflow:/github/workflow',
         // '-v', `${RUNNER_WORKSPACE}/${WORKSPACE}:/github/workspace`,
