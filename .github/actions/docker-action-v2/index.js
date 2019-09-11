@@ -9,7 +9,6 @@ const RUNNER_WORKSPACE = process.env.RUNNER_WORKSPACE;
 const WORKSPACE = RUNNER_WORKSPACE.split('/').pop();
 
 async function runDockerContainer() {
-    console.log(COMMAND);
     core.debug('run docker container');
     await exec.exec('docker', [
         'container',
@@ -20,7 +19,6 @@ async function runDockerContainer() {
         '-v', '/home/runner/work/_temp/_github_home:/github/home',
         '-v', '/home/runner/work/_temp/_github_workflow:/github/workflow',
         '-v', `${RUNNER_WORKSPACE}/${WORKSPACE}:/github/workspace`,
-        '-w', '/github/workspace',
         IMAGE,
         'sh', '-cex', COMMAND,
     ]);
