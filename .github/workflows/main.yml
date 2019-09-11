@@ -6,7 +6,7 @@ jobs:
   dockerizer:
     runs-on: ubuntu-latest
     container:
-      image: Dockerfile
+      image: php:7.3-apache
     steps:
       - uses: actions/checkout@v1
       - name: echo
