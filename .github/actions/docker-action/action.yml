@@ -5,7 +5,7 @@ inputs:
     required: true
 runs:
   using: "docker"
-  image: "docker://debian:stetch-slim"
+  image: "docker://ubuntu:latest"
   entrypoint: /bin/sh
   args: ["-c", "echo hi"]
   # args: ["${{ inputs.commands }}"]
