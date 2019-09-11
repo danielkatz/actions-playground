@@ -6,8 +6,8 @@ inputs:
 runs:
   using: "docker"
   image: "docker://ubuntu:latest"
-  entrypoint: /bin/sh
-  # args: ["-c", "echo hi"]
+  entrypoint: /bin/bash
+  args: ["--help"]
   # args: ["${{ inputs.commands }}"]
   # using: "node12"
   # main: "index.js"
