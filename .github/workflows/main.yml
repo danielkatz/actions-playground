@@ -27,4 +27,4 @@ jobs:
         uses: ./.github/actions/docker-action-v2
         with:
           image: ubuntu:latest
-          command: df
+          command: df && ls -la
