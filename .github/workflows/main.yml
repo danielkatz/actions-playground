@@ -16,14 +16,12 @@ jobs:
       - name: Look at /
         uses: ./.github/actions/docker-action
         with:
-          docker: ubuntu:latest
           cmd: |
             ls -la
             echo 'Hey'
       - name: Look at /github/home
         uses: ./.github/actions/docker-action
         with:
-          docker: ubuntu:latest
           cmd: cd /github/home && ls -la
       - name: JS Based action
         uses: ./.github/actions/docker-action-v2
