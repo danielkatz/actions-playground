@@ -8,15 +8,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - run: cat /home/runner/work/actions-playground/actions-playground/./.github/actions/docker-action/action.yml
       - run: docker --version
-      - name: Look at volumes using action
-        uses: ./.github/actions/docker-action
-        with:
-          cmd: df
-      - name: Look at /
+      - name: Look at volumes
         uses: docker://ubuntu:latest
         with:
-          args: ls -la
+          args: df
+      - name: Look at /
+        uses: ./.github/actions/docker-action
+        with:
+          cmd: ls -la
+      - name: Look at /github/home
+        uses: ./.github/actions/docker-action
+        with:
+          cmd: cd /github/home && ls -la
