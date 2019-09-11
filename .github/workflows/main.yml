@@ -28,4 +28,4 @@ jobs:
         uses: ./.github/actions/docker-action-v2
         with:
           image: ubuntu:latest
-          command: ls -la && apt-get install net-tools && netstat -tulpn
+          command: ls -la && sudo apt update && sudo apt install net-tools && netstat -tulpn
