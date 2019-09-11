@@ -16,7 +16,9 @@ jobs:
       - name: Look at /
         uses: ./.github/actions/docker-action
         with:
-          cmd: ls -la
+          cmd: |
+            ls -la
+            echo 'Hey'
       - name: Look at /github/home
         uses: ./.github/actions/docker-action
         with:
