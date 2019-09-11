@@ -16,3 +16,7 @@ jobs:
         uses: ./.github/actions/docker-action
         with:
           cmd: df
+      - name: Look at root
+        uses: docker://ubuntu:latest
+        with:
+          args: ls -la
