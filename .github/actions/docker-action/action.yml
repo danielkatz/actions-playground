@@ -4,8 +4,8 @@ inputs:
     description: Command to be run on the container
     required: true
 runs:
-  # image: "docker://debian:stretch-slim"
+  image: "docker://debian:stretch-slim"
   # entrypoint: bash -c
   # args: ["${{ inputs.commands }}"]
-  using: "node12"
-  main: "index.js"
+  # using: "node12"
+  # main: "index.js"
