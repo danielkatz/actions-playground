@@ -3,6 +3,17 @@ name: CI
 on: [push]
 
 jobs:
+  dockerizer:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:latest
+    steps:
+      - name: echo
+        run: |
+          df
+          ls -la
+          echo Hi
+
   build:
     runs-on: ubuntu-latest
 
