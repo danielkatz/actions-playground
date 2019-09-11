@@ -24,6 +24,8 @@ jobs:
         uses: ./.github/actions/docker-action
         with:
           cmd: cd /github/home && ls -la
+      - name: Add MySql
+        uses: mirromutth/mysql-action@v1.1
       - name: JS Based action
         uses: ./.github/actions/docker-action-v2
         with:
