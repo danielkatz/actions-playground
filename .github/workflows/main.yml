@@ -11,6 +11,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       - name: My first step
-        uses: /.github/actions/docker-action
+        uses: ./.github/actions/docker-action
         with:
           commands: "whoami"
