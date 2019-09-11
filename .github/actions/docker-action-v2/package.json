@@ -1,0 +1,13 @@
+{
+  "name": "docker-action",
+  "version": "1.0.0",
+  "description": "Github Action for running Docker images",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Daniel Katz @Elementor",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.1.0",
+    "@actions/exec": "^1.0.1"
+  }
+}

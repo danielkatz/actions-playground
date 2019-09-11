@@ -1,0 +1,11 @@
+name: Docker action
+inputs:
+  image:
+    description: The Docker image to be run
+    required: true
+  command:
+    description: Command to be run on the container
+    required: true
+runs:
+  using: node12
+  main: index.js

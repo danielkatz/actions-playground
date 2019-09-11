@@ -25,3 +25,8 @@ jobs:
         with:
           docker: ubuntu:latest
           cmd: cd /github/home && ls -la
+      - name: JS Based action
+        uses: ./.github/actions/docker-action-v2
+        with:
+          image: ubuntu:latest
+          command: df
