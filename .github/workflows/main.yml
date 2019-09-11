@@ -12,11 +12,11 @@ jobs:
         run: echo Hello, world!
       - run: cat /home/runner/work/actions-playground/actions-playground/./.github/actions/docker-action/action.yml
       - run: docker --version
-      - name: My first step
+      - name: Look at volumes using action
         uses: ./.github/actions/docker-action
         with:
           cmd: df
-      - name: Look at root
+      - name: Look at /
         uses: docker://ubuntu:latest
         with:
           args: ls -la
