@@ -6,7 +6,7 @@ jobs:
   dockerizer:
     runs-on: ubuntu-latest
     container:
-      image: pojome/php-js-lints
+      image: Dockerfile
     steps:
       - uses: actions/checkout@v1
       - name: echo
