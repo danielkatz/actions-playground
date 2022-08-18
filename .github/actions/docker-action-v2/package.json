@@ -7,7 +7,7 @@
   "author": "Daniel Katz @Elementor",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.1.0",
+    "@actions/core": "^1.9.1",
     "@actions/exec": "^1.0.1"
   }
 }
